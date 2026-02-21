@@ -61,7 +61,11 @@ class _PurgeScreenState extends ConsumerState<PurgeScreen> {
     try {
       final service = ref.read(moleServiceProvider);
       final result = await service.purge();
-      setState(() => _output = result);
+      final cleanResult = result.replaceAll(
+        RegExp(r'\x1B\[[0-?]*[ -/]*[@-~]'),
+        '',
+      );
+      setState(() => _output = cleanResult);
     } catch (e) {
       setState(() => _output = 'Error: $e');
     } finally {
