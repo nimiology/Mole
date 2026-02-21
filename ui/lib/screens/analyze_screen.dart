@@ -14,12 +14,13 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
   List<String> _pathSegments = [];
   List<_DirItem> _items = [];
   bool _isLoading = false;
+  bool _hasScanned = false;
   int _totalSizeBytes = 0;
 
   @override
   void initState() {
     super.initState();
-    _scanPath('${Directory.systemTemp.parent.parent.path}/Users');
+    _currentPath = Platform.environment['HOME'] ?? '/Users';
   }
 
   Future<void> _scanPath(String path) async {
@@ -72,6 +73,7 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
       _items = items.take(50).toList();
       _totalSizeBytes = total;
       _isLoading = false;
+      _hasScanned = true;
     });
   }
 
@@ -142,7 +144,7 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
                 child: Container(
                   width: 32,
                   height: 32,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     shape: BoxShape.circle,
                     color: Colors.transparent,
                   ),
@@ -162,8 +164,8 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
                     children: [
                       for (int i = 0; i < _pathSegments.length; i++) ...[
                         if (i > 0)
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 4),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 4),
                             child: Icon(
                               Icons.chevron_right,
                               size: 14,
@@ -192,46 +194,111 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
                   ),
                 ),
               ),
-              GestureDetector(
-                onTap: () => _scanPath(_currentPath),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 24,
-                    vertical: 8,
-                  ),
-                  decoration: BoxDecoration(
-                    color: AppColors.primary,
-                    borderRadius: BorderRadius.circular(8),
-                    boxShadow: [
-                      BoxShadow(
-                        color: AppColors.primary.withValues(alpha: 0.2),
-                        blurRadius: 12,
-                      ),
-                    ],
-                  ),
-                  child: const Row(
-                    children: [
-                      Icon(Icons.search, color: Colors.white, size: 18),
-                      SizedBox(width: 6),
-                      Text(
-                        'Scan',
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w700,
-                          color: Colors.white,
+              if (_hasScanned)
+                GestureDetector(
+                  onTap: () => _scanPath(_currentPath),
+                  child: Container(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 24,
+                      vertical: 8,
+                    ),
+                    decoration: BoxDecoration(
+                      color: AppColors.primary,
+                      borderRadius: BorderRadius.circular(8),
+                      boxShadow: [
+                        BoxShadow(
+                          color: AppColors.primary.withValues(alpha: 0.2),
+                          blurRadius: 12,
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(Icons.search, color: Colors.white, size: 18),
+                        SizedBox(width: 6),
+                        Text(
+                          'Scan',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
             ],
           ),
         ),
 
         // Main content
         Expanded(
-          child: _isLoading
+          child: !_hasScanned
+              ? Center(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Container(
+                        width: 80,
+                        height: 80,
+                        decoration: BoxDecoration(
+                          color: AppColors.background,
+                          shape: BoxShape.circle,
+                          boxShadow: const [
+                            BoxShadow(
+                              color: Colors.black45,
+                              blurRadius: 20,
+                              offset: Offset(0, 10),
+                            ),
+                          ],
+                          border: Border.all(color: AppColors.border),
+                        ),
+                        child: const Icon(
+                          Icons.radar,
+                          size: 32,
+                          color: AppColors.textSlate400,
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                      if (_isLoading) ...[
+                        const CircularProgressIndicator(
+                          color: AppColors.primary,
+                        ),
+                        const SizedBox(height: 16),
+                        const Text(
+                          'Analyzing Disk...',
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: AppColors.textSlate400,
+                          ),
+                        ),
+                      ] else ...[
+                        ElevatedButton.icon(
+                          onPressed: () => _scanPath(_currentPath),
+                          icon: const Icon(Icons.search),
+                          label: const Text('Analyze Drive'),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: AppColors.primary,
+                            foregroundColor: AppColors.background,
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 32,
+                              vertical: 16,
+                            ),
+                            textStyle: const TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.w700,
+                            ),
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ],
+                  ),
+                )
+              : _isLoading
               ? const Center(
                   child: CircularProgressIndicator(color: AppColors.primary),
                 )
