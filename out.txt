@@ -1,0 +1,189 @@
+
+[1;35mClean Your Mac[0m
+
+[0;33mDry Run Mode[0m, Preview only, no deletions
+
+[1;34m⚙[0m Apple Silicon | Free space: 15Gi
+[1;34m✓[0m Whitelist: 20 core patterns active
+  [0;90m→ /Users/nimajoker/Library/Caches/ms-playwright*[0m
+  [0;90m→ /Users/nimajoker/.cache/huggingface*[0m
+  [0;90m→ /Users/nimajoker/.m2/repository/*[0m
+  [0;90m→ /Users/nimajoker/.gradle/caches/*[0m
+  [0;90m→ /Users/nimajoker/.gradle/daemon/*[0m
+  [0;90m→ /Users/nimajoker/.ollama/models/*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/com.nssurge.surge-mac/*[0m
+  [0;90m→ /Users/nimajoker/Library/Application Support/com.nssurge.surge-mac/*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/org.R-project.R/R/renv/*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/pypoetry/virtualenvs*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/JetBrains*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/com.jetbrains.toolbox*[0m
+  [0;90m→ /Users/nimajoker/Library/Application Support/JetBrains*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/com.apple.finder[0m
+  [0;90m→ /Users/nimajoker/Library/Mobile Documents*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/com.apple.FontRegistry*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/com.apple.spotlight*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/com.apple.Spotlight*[0m
+  [0;90m→ /Users/nimajoker/Library/Caches/CloudKit*[0m
+
+[1;35m➤ User essentials[0m
+  [0;33m→[0m User app cache 76 items[0m, [0;33m2.87GB dry[0m
+  [0;33m→[0m User app logs 29 items[0m, [0;33m10.6MB dry[0m
+  [0;33m→[0m Trash · would empty, 1 items
+
+[1;35m➤ Finder metadata[0m
+  [0;32m✓[0m Nothing to clean
+
+[1;35m➤ macOS system caches[0m
+  [0;33m→[0m Saved application states[0m, [0;33m264KB dry[0m
+
+[1;35m➤ Sandboxed app caches[0m
+  [0;33m→[0m Group Containers logs/caches[0m, [0;33m112.0MB dry[0m
+
+[1;35m➤ Browsers[0m
+  [0;33m→[0m Chrome cache[0m, [0;33m1.48GB dry[0m
+  [0;33m→[0m Chrome GPU cache 5 items[0m, [0;33m5.5MB dry[0m
+  [0;33m→[0m Chrome component CRX cache 23 items[0m, [0;33m33.3MB dry[0m
+  [0;33m→[0m GoogleUpdater CRX cache 3 items[0m, [0;33m681.3MB dry[0m
+  [0;33m→[0m GoogleUpdater old files 2 items[0m, [0;33m2.0MB dry[0m
+  [0;90m◎[0m Google Chrome running · old versions cleanup skipped
+
+[1;35m➤ Cloud storage[0m
+  [0;32m✓[0m Nothing to clean
+
+[1;35m➤ Office applications[0m
+  [0;32m✓[0m Nothing to clean
+
+[1;35m➤ Developer tools[0m
+  [0;33m→[0m npm cache · would clean
+  [0;33m→[0m npm cache directory 3 items[0m, [0;33m1.16GB dry[0m
+  [0;33m→[0m npm npx cache 2 items[0m, [0;33m876KB dry[0m
+  [0;33m→[0m npm logs 20 items[0m, [0;33m73KB dry[0m
+  [0;33m→[0m pip cache · would clean
+  [0;33m→[0m uv cache 6 items[0m, [0;33m80.2MB dry[0m
+  [0;33m→[0m Go cache · would clean
+  [0;90m•[0m Project caches · scanning for Next.js/Python/Flutter artifacts
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m473.0MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m2.52GB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m281.2MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m3.01GB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m24KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m20KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m44KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m4KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m96KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m282.8MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m1.22GB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m45.9MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m699.1MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m155.7MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m1008.8MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m269.6MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m809.5MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m66.5MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m431.3MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m283.5MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m1.10GB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m153.4MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m2.22GB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m28KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m191.6MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m817.2MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m54.9MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m251.8MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m1.24GB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m78.2MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m517.7MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m191.6MB dry[0m
+  [0;33m→[0m Flutter build cache (build/)[0m, [0;33m817.2MB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m16KB dry[0m
+  [0;33m→[0m Flutter build cache (.dart_tool)[0m, [0;33m24KB dry[0m
+  [0;90m•[0m Xcode runtime volumes · scanning 3 entries
+  [0;33m→[0m Xcode runtime volumes · 2 unused, 1 in use
+  [0;90m•[0m Runtime volumes total: 0B (unused 0B, in-use 0B)
+    [0;90mUNUSED[0m 0B · /Library/Developer/CoreSimulator/Cryptex/Images
+    [0;90mUNUSED[0m 0B · /Library/Developer/CoreSimulator/Cryptex/Caches
+    [0;90mIN_USE[0m 0B · /Library/Developer/CoreSimulator/Volumes/iOS_23A343
+  [0;32m✓[0m Xcode unavailable simulators · already clean
+  [0;33m→[0m Android Studio cache 23 items[0m, [0;33m289.4MB dry[0m
+  [0;33m→[0m Android SDK cache 76 items[0m, [0;33m5.5MB dry[0m
+  [0;33m→[0m Xcode Interface Builder cache[0m, [0;33m52.4MB dry[0m
+  [0;33m→[0m Antigravity cache 2 items[0m, [0;33m1.5MB dry[0m
+  [0;33m→[0m Antigravity code cache 2 items[0m, [0;33m16KB dry[0m
+  [0;33m→[0m Antigravity GPU cache 5 items[0m, [0;33m5.5MB dry[0m
+  [0;33m→[0m Antigravity Dawn cache 5 items[0m, [0;33m545KB dry[0m
+  [0;33m→[0m Antigravity WebGPU cache 5 items[0m, [0;33m545KB dry[0m
+  [0;33m→[0m Homebrew lock files 150 items[0m, [0;33m0B dry[0m
+  [0;33m→[0m Homebrew · would cleanup and autoremove
+
+[1;35m➤ Development applications[0m
+  [0;33m→[0m Xcode build products 5 items[0m, [0;33m1.9MB dry[0m
+  [0;33m→[0m Xcode derived data 10 items[0m, [0;33m545.0MB dry[0m
+  [0;33m→[0m Xcode archives[0m, [0;33m0B dry[0m
+  [0;33m→[0m Adobe cache 2 items[0m, [0;33m500KB dry[0m
+  [0;33m→[0m Zsh completion cache[0m, [0;33m49KB dry[0m
+  [0;33m→[0m less history[0m, [0;33m1KB dry[0m
+
+[1;35m➤ Virtual machine tools[0m
+  [0;32m✓[0m Nothing to clean
+
+[1;35m➤ Application Support[0m
+  [0;33m→[0m Application Support logs/caches[0m, [0;33m96.4MB dry[0m
+
+[1;35m➤ Uninstalled app data[0m
+  [0;32m✓[0m Found 161 active/installed apps
+  [0;33m→[0m Orphaned WebKit: com.oracle.java.Java-Updater[0m, [0;33m356KB dry[0m
+  [0;33m→[0m Orphaned HTTP: com.firebase.crashlytics.upload-symbols[0m, [0;33m2.0MB dry[0m
+  [0;33m→[0m Orphaned HTTP: com.oracle.java.Java-Updater[0m, [0;33m168KB dry[0m
+  [0;33m→[0m Orphaned HTTP: com.paragon-software.ntfs.installer[0m, [0;33m56KB dry[0m
+  [0;32m✓[0m Cleaned 4 items, about 2.6MB
+
+[1;35m➤ Apple Silicon updates[0m
+  [0;32m✓[0m Nothing to clean
+
+[1;35m➤ iOS device backups[0m
+  [0;32m✓[0m Nothing to clean
+
+[1;35m➤ Time Machine incomplete backups[0m
+  [0;32m✓[0m No incomplete backups found
+  [0;32m✓[0m Nothing to clean
+
+[1;35m➤ Large files to review[0m
+  [0;32m✓[0m No large items detected in common locations
+
+
+======================================================================
+[1;34mDry run complete - no changes made[0m
+Potential space: [0;32m26.44GB[0m | Items: 479 | Categories: 97
+Detailed file list: [0;90m/Users/nimajoker/.config/mole/clean-list.txt[0m
+Use [0;90mmo clean --whitelist[0m to add protection rules
+======================================================================
+
