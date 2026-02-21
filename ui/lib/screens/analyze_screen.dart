@@ -31,38 +31,43 @@ class _AnalyzeScreenState extends State<AnalyzeScreen> {
       return;
     }
 
-    final entries = await dir.list().toList();
     final items = <_DirItem>[];
 
-    for (final entry in entries) {
-      final name = entry.path.split('/').last;
-      if (name.startsWith('.')) continue;
+    try {
+      // Use macOS native du command to recursively calculate exact sizes of all visible children instantly
+      final result = await Process.run('sh', ['-c', 'du -sk "$path"/*']);
+      if (result.exitCode == 0 || result.exitCode == 1) {
+        // 1 means some permissions denied, but it still prints what it can
+        final lines = (result.stdout as String).split('\n');
+        for (final line in lines) {
+          if (line.trim().isEmpty) continue;
 
-      int size = 0;
-      bool isDir = entry is Directory;
-      String type = isDir ? 'Folder' : _getFileType(name);
+          final match = RegExp(r'^(\d+)\s+(.+)$').firstMatch(line.trim());
+          if (match != null) {
+            final kb = int.tryParse(match.group(1)!) ?? 0;
+            final childPath = match.group(2)!;
+            final name = childPath.split('/').last;
 
-      if (entry is File) {
-        try {
-          size = await entry.length();
-        } catch (_) {}
-      } else if (isDir) {
-        try {
-          final children = await entry.list().take(200).toList();
-          size = children.length * 4096;
-        } catch (_) {}
+            if (name.startsWith('.')) continue;
+
+            final typeStat = FileStat.statSync(childPath);
+            final isDir = typeStat.type == FileSystemEntityType.directory;
+            final typeStr = isDir ? 'Folder' : _getFileType(name);
+            final sizeBytes = kb * 1024;
+
+            items.add(
+              _DirItem(
+                name: name,
+                path: childPath,
+                size: sizeBytes,
+                isDir: isDir,
+                type: typeStr,
+              ),
+            );
+          }
+        }
       }
-
-      items.add(
-        _DirItem(
-          name: name,
-          path: entry.path,
-          size: size,
-          isDir: isDir,
-          type: type,
-        ),
-      );
-    }
+    } catch (_) {}
 
     items.sort((a, b) => b.size.compareTo(a.size));
     final total = items.fold<int>(0, (sum, item) => sum + item.size);
